@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Govind Savaliya</title>
+    <!-- ==== CSS Files ==== -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/skins/color-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- ==== Style Switcher ==== -->
+    <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+    <link rel="stylesheet" href="css/style-switcher.css">
+
+    <!-- banner text animation -->
+    <script>
+        //text effect
+
+        document.addEventListener('DOMContentLoaded', function (event) {
+
+            var dataText = [
+                "Hi there, I am  Govind savaliya.",
+                "I'm  Full Stack Developer.",
+                "I have strong knowledge in web development",
+                "As well as in photohsop, css3",
+                "Web Designer", "web Developer", "Graphic Designer", "Clipping Path", "Apps Interface", "Photography", "Hi there, I am  Govind savaliya."
+            ];
+
+            // type one text in the typwriter
+            // keeps calling itself until the text is finished
+            function typeWriter(text, i, fnCallback) {
+                // chekc if text isn't finished yet
+                if (i < (text.length)) {
+                    // add next character to h1
+                    document.getElementById("text").innerHTML = text.substring(0, i + 1) +
+                        '<span aria-hidden="true" class="banner_text_w3ls"></span>';
+
+                    // wait for a while and call this function again for next character
+                    setTimeout(function () {
+                        typeWriter(text, i + 1, fnCallback)
+                    }, 50);
+                }
+                // text finished, call callback if there is a callback function
+                else if (typeof fnCallback == 'function') {
+                    // call callback after timeout
+                    setTimeout(fnCallback, 1000);
+                }
+            }
+            // start a typewriter animation for a text in the dataText array
+            function StartTextAnimation(i) {
+                // check if dataText[i] exists
+                if (i < dataText[i].length) {
+                    // text exists! start typewriter animation
+                    typeWriter(dataText[i], 0, function () {
+                        // after callback (and whole text has been animated), start next text
+                        StartTextAnimation(i + 1);
+                    });
+                }
+            }
+            // start the text animation
+            StartTextAnimation(0);
+        });
+    </script>
+
+    <!-- //banner text animation -->
+
+</head>
+
+<body>
+    <!--  ==== Main Container Start ==== -->
+    <div class="main-container">
+        <!-- ==== Aside Start ==== -->
+        <div class="aside">
+            <div class="logo">
+                <a href="#"><span>G</span>ovind</a>
+            </div>
+            <div class="nav-toggler">
+                <span></span>
+            </div>
+            <ul class="nav">
+                <li><a href="#home" class="active"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="#about"><i class="fa-solid fa-user"></i>About</a></li>
+                <li><a href="#services"><i class="fa-solid fa-list"></i>Services</a></li>
+                <li><a href="#portfolio"><i class="fa-solid fa-briefcase"></i>Portfolio</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-comment"></i>Contact</a></li>
+            </ul>
+        </div>
+        <!-- ==== Aside End ==== -->
+        <!--  ==== Main content Start ==== -->
+        <div class="main-content">
+            <!-- ==== Home Section Start ==== -->
+            <section class="home active section" id="home">
+                <div class="container">
+                    <div class="row" id="flex">
+                        <div class="home-info padd-15">
+                            <h3 class="hello">Hello, my name is <span class="name">Govind Savaliya</span></h3>
+                            <div id="text" class="banner_text_w3ls my-md-5 my-3"></div><br>
+                            <h3 class="my-profession">I' , a <span class="typing">Full Stack Developer</span></h3><br />
+                            <p>I'm a web developer with extensiv expeience for over 3 year. My expertise is to create
+                                and website design, graphic design,and many more...</p>
+                            <a href="#" class="btn">Download CV</a>
+                        </div>
+                        <div class="home-img padd-15">
+                            <img src="image/govind.jpg" style="width: 100%; height: 100%;" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ==== Home Section End ==== -->
+            <!-- ==== About Section Start ==== -->
+            <section class="about section" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>About Me</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="about-content padd-15">
+                            <div class="row">
+                                <div class="about-text padd-15">
+                                    <h3>I'm Govind Savaliya and <span>Web Developer</span></h3>
+
+                                    <p>If you are an entrepreneur, you know that your success cannot depend on the
+                                        opinions of others. Like the wind, opinions. If you are an entrepreneur, you
+                                        know that your success cannot depend on the opinions of others. Like the wind,
+                                        opinions.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="personal-info padd-15">
+                                    <div class="row" id="flex1">
+                                        <div class="info-item padd-15">
+                                            <p>Birthday : <span>12 April 2000</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Age : <span>22</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Website : <span><a href="https://github.com/Govindsavaliya">
+                                                        https://github.com/Govindsavaliya</a></span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Email : <span><a
+                                                        href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new">gdsavaliya24@gmail.com</a></span>
+                                            </p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Instagram : <span><a
+                                                        href="https://www.instagram.com/govind._.savaliya/">govind._.savaliya</a></span>
+                                            </p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Phone : <span>+91 9624****07</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>City : <span>Surat</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Freelance : <span>Available</span></p>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="buttons padd-15" id="flex1">
+                                            <a href="#contact" data-section-index="1" class="btn hire-me">Here Me..</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skills padd-15">
+                                    <div class="row">
+                                        <div class="skill-item padd-15">
+                                            <h5>HTML</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 96%;"></div>
+                                                <div class="skill-percent">96%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>CSS</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 95%;"></div>
+                                                <div class="skill-percent">95%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>BootStarp</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 76%;"></div>
+                                                <div class="skill-percent">76%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>JS</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 86%;"></div>
+                                                <div class="skill-percent">86%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Node JS</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 70%;"></div>
+                                                <div class="skill-percent">70%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="education padd-15">
+                                    <h3 class="title">Education</h3>
+                                    <div class="row">
+                                        <div class="timline-box padd-15">
+                                            <div class="timeline shadow-dark">
+                                                <!-- ==== timeline item ==== -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <div class="timeline-date">
+                                                        <i class="fa fa-calendar" aria-hidden="true"></i> 2020-2021
+                                                    </div>
+                                                    <h4 class="timeline-title">full stack developer</h4>
+                                                    <p class="timeline-text">“If you are an entrepreneur, you know that
+                                                        your success cannot depend on the opinions
+                                                        of others. Like the wind, opinions.”</p>
+                                                </div>
+                                                <!-- ==== timeline item ==== -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <div class="timeline-date">
+                                                        <i class="fa fa-calendar" aria-hidden="true"></i> 2017-2020
+                                                    </div>
+                                                    <h4 class="timeline-title">bachelor of commerce</h4>
+                                                    <p class="timeline-text">“Do you want to be even more successful?
+                                                        Learn to love learning and growth. The more effort you put into
+                                                        improving your skills.”</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience padd-15">
+                                    <h3 class="title">Experience</h3>
+                                    <div class="row">
+                                        <div class="timline-box padd-15">
+                                            <div class="timeline shadow-dark">
+                                                <!-- ==== timeline item ==== -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <div class="timeline-date">
+                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        2021-Continue....
+                                                    </div>
+                                                    <h4 class="timeline-title">full stack developer</h4>
+                                                    <p class="timeline-text">“It is not because things are difficult
+                                                        that we do not dare; it is because we do not dare that they are
+                                                        difficult.”</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ==== About Section End ==== -->
+            <!-- ==== Services Section Start ==== -->
+            <section class="service section" id="services">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Services</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- ==== Services item Start ==== -->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-solid fa-laptop-code"></i>
+                                </div>
+                                <h4>Web Design</h4>
+                                <p>“It is not because things are difficult that we do not dare; it is because we do not
+                                    dare that they are difficult.”</p>
+
+                            </div>
+                        </div>
+                        <!-- ==== Services item End ==== -->
+                        <!-- ==== Services item Start ==== -->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-solid fa-code"></i>
+                                </div>
+                                <h4>Web Development</h4>
+                                <p>“If you are an entrepreneur, you know that your success cannot depend on the opinions
+                                    of others. Like the wind, opinions.”</p>
+                            </div>
+                        </div>
+                        <!-- ==== Services item End ==== -->
+                        <!-- ==== Services item End ==== -->
+                        <!-- ==== Services item Start ==== -->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-solid fa-camera"></i>
+                                </div>
+                                <h4>Photography</h4>
+                                <p>“Do you want to be even more successful? Learn to love learning and growth. The more
+                                    effort you put into improving your skills.”</p>
+                            </div>
+                        </div>
+                        <!-- ==== Services item End ==== -->
+                        <!-- ==== Services item End ==== -->
+                        <!-- ==== Services item Start ==== -->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-solid fa-images"></i>
+                                </div>
+                                <h4>Clipping Path</h4>
+                                <p>“Hypnosis quit smoking methods maintain caused quite a stir in the medical world over
+                                    the last two decades. There is a lot of argument.”</p>
+                            </div>
+                        </div>
+                        <!-- ==== Services item End ==== -->
+                        <!-- ==== Services item End ==== -->
+                        <!-- ==== Services item Start ==== -->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-solid fa-table"></i>
+                                </div>
+                                <h4>Apps Interface</h4>
+                                <p>“Do you sometimes have the feeling that you’re running into the same obstacles over
+                                    and over again? Many of my conflicts.”</p>
+                            </div>
+                        </div>
+                        <!-- ==== Services item End ==== -->
+                        <!-- ==== Services item End ==== -->
+                        <!-- ==== Services item Start ==== -->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-solid fa-rocket"></i>
+                                </div>
+                                <h4>Graphic Design</h4>
+                                <p>“You’ve heard the expression, “Just believe it and it will come.” Well, technically,
+                                    that is true, however, ‘believing’ is not just thinking that.”</p>
+
+                            </div>
+                        </div>
+                        <!-- ==== Services item End ==== -->
+                    </div>
+                </div>
+            </section>
+            <!-- ==== Services Section End ==== -->
+            <!-- ==== Portfolio Section Start ==== -->
+            <section class="portfolio section " id="portfolio">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Portfolio</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="portfolio-heading padd-15">
+                            <h2>My Last Projects :</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- ==== Portfolio item Start ==== -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="image/website-template-1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ==== Portfolio item End ==== -->
+                        <!-- ==== Portfolio item Start ==== -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="image/website-template-2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ==== Portfolio item End ==== -->
+                        <!-- ==== Portfolio item Start ==== -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="image/website-template-3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ==== Portfolio item End ==== -->
+                        <!-- ==== Portfolio item Start ==== -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="image/website-template-4.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ==== Portfolio item End ==== -->
+                        <!-- ==== Portfolio item Start ==== -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="image/website-template-5.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ==== Portfolio item End ==== -->
+                        <!-- ==== Portfolio item Start ==== -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="image/64b4efb67f136770ece6ed6415a2c7ba62e5ce58.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ==== Portfolio item End ==== -->
+                    </div>
+                </div>
+            </section>
+            <!-- ==== Portfolie Section End ==== -->
+            <!-- ==== Contact Section Start ==== -->
+            <section class="contact section" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Contact Me</h2>
+                        </div>
+                    </div>
+                    <h3 class="contact-title padd-15">Have You Any Question ?</h3>
+                    <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
+                    <div class="row">
+                        <!--  ==== Contact item Start ==== -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon">
+                                <i class="fa fa-brands fa-instagram"></i>
+                                <h4>Instagram</h4>
+                                <p><a href="https://www.instagram.com/govind._.savaliya/">govind._.savaliya</a></p>
+                            </div>
+                        </div>
+                        <!--  ==== Contact item End ==== -->
+                        <!--  ==== Contact item Start ==== -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <h4>Office</h4>
+                                <p>Surat</p>
+                            </div>
+                        </div>
+                        <!--  ==== Contact item End ==== -->
+                        <!--  ==== Contact item Start ==== -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon">
+                                <i class="fa fa-envelope"></i>
+                                <h4>Email</h4>
+                                <p><a
+                                        href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new">gdsavaliya24@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!--  ==== Contact item End ==== -->
+                        <!--  ==== Contact item Start ==== -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon">
+                                <i class="fa fa-globe-europe"></i>
+                                <h4>website</h4>
+                                <p><a href="https://github.com/Govindsavaliya"> https://github.com/Govindsavaliya</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!--  ==== Contact item End ==== -->
+                    </div>
+                    <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
+                    <h4 class="contact-sub-title padd-15">I'M VERY RESPOSIVE TO MESSAGES ❤️</h4>
+                    <!-- ==== Contact From ==== -->
+                    <div class="row">
+                        <div class="contact-from padd-15">
+                            <div class="row">
+                                <div class="form-item col-6 padd-15">
+                                    <div class="from-group">
+                                        <input type="text" class="from-control" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="form-item col-6 padd-15">
+                                    <div class="from-group">
+                                        <input type="email" class="from-control" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="from-group">
+                                        <input type="text" class="from-control" placeholder="Subject">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="from-group">
+                                        <textarea name="" class="from-control" id="" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="from-group">
+                                        <button type="submit" class="btn">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ==== Contact Section End ==== -->
+        </div>
+        <!--  ==== Main content End ==== -->
+    </div>
+    <!--  ==== Main Container End ==== -->
+    <!--  ==== Style Switcher Start ==== -->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas "></i>
+        </div>
+        <h4>The Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <!--  ==== Style Switcher End ==== -->
+    <!-- ==== JS Files ==== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+        referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+    <script src="js/style-switcher.js"></script>
+</body>
+
+</html>
